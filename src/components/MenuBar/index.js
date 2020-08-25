@@ -5,7 +5,7 @@ class MenuBar extends React.Component{
     render() {
         return (    
             <MenuDiv>
-            <MenuTitle></MenuTitle>
+            <MenuTitle>Jornadas</MenuTitle>
                 <ItemIcon></ItemIcon>
                 <ItemName></ItemName>
                 <ItemQt></ItemQt>
