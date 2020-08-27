@@ -8,6 +8,7 @@ export const Sidebar = styled.div`
   height: 768px;
   background-color: #1a1731;
   align-items: center;
+  margin-right:-90px;
 `;
 
 export const TopContainer = styled.div`

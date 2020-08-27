@@ -1,15 +1,23 @@
 import React from "react";
-import { Divprincipal } from "./styles";
+import { Divprincipal, DivMenuLogo } from "./styles";
 import SideMenuBar from "../../components/SideMenuBar/index.js";
-import MenuBar from "../../components/MenuBar/index.js";
-import Search from "../../components/Search/index.js"
+import Menu from "../../components/Menu/index.js";
+import Search from "../../components/Search/index.js";
+import HomeLogo from "../../components/HomeLogo/index.js";
+import Table from "../../components/Table/index.js";
 
 function App() {
   return (
     <Divprincipal>
       <SideMenuBar></SideMenuBar>
-      <MenuBar></MenuBar>
+      <DivMenuLogo>
+        <HomeLogo></HomeLogo>
+        <Menu></Menu>
+      </DivMenuLogo>
+      
       <Search></Search>
+
+      <Table></Table>
     </Divprincipal>
   );
 }
