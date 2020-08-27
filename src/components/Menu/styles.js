@@ -4,15 +4,16 @@ export const MenuTitle = styled.p`
   font-size: 16px;
   font-family: "Courier New", Courier, monospace;
   text-align: left;
-  align-self: left;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-top: 65px;
   margin-bottom: 30px;
   display: flex;
-  flex-direction: table;
+  flex-direction: flex-start;
 `;
 
 export const MenuDivPrincipal = styled.div`
   opacity: 1;
-  border: solid;
   width: fit-content;
   height: fit-content;
 `;

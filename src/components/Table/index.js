@@ -1,9 +1,44 @@
 import React from "react";
-import {TableLine} from "./styles"
+import {
+  DivTable,
+  DivHeader,
+  DivLines,
+  HeaderName,
+  HeaderRecipient,
+  HeaderSuccess,
+  HeaderStatus,
+  TableLine,
+  ColumnName,
+  ColumnRecipient,
+  ColumnSuccess,
+  DivStatus,
+  ColumnStatus,
+  IconStatus,
+} from "./styles";
 class Table extends React.Component {
   render() {
     return (
-        <TableLine></TableLine>
+      <DivTable>
+        <DivHeader>
+          <HeaderName>Nome</HeaderName>
+          <HeaderRecipient>Destinatários</HeaderRecipient>
+          <HeaderSuccess>Sucesso</HeaderSuccess>
+          <HeaderStatus>Status</HeaderStatus>
+        </DivHeader>
+
+        <DivLines>
+          <TableLine>
+            <ColumnName>Divulgação novos serviços</ColumnName>
+            <ColumnRecipient>20.210.000</ColumnRecipient>
+            <ColumnSuccess>30%</ColumnSuccess>
+
+            <DivStatus>
+              <IconStatus></IconStatus>
+              <ColumnStatus>Enviando</ColumnStatus>
+            </DivStatus>
+          </TableLine>
+        </DivLines>
+      </DivTable>
     );
   }
 }

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const DivButtonsHome = styled.div`
+  margin-top:32px;
   width: 120px;
   height: 30px;
   display: flex;
   flex-direction: row;
-  border:solid;
   justify-content:space-around;
 `;
 

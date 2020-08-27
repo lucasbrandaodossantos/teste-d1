@@ -1,5 +1,5 @@
 import React from "react";
-import { Divprincipal, DivMenuLogo } from "./styles";
+import { Divprincipal, DivMenuLogo, DivSearchTable } from "./styles";
 import SideMenuBar from "../../components/SideMenuBar/index.js";
 import Menu from "../../components/Menu/index.js";
 import Search from "../../components/Search/index.js";
@@ -14,10 +14,11 @@ function App() {
         <HomeLogo></HomeLogo>
         <Menu></Menu>
       </DivMenuLogo>
-      
-      <Search></Search>
 
-      <Table></Table>
+      <DivSearchTable>
+        <Search></Search>
+        <Table></Table>
+      </DivSearchTable>
     </Divprincipal>
   );
 }
