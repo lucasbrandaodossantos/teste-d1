@@ -5,6 +5,7 @@ import Menu from "../../components/Menu/index.js";
 import Search from "../../components/Search/index.js";
 import HomeLogo from "../../components/HomeLogo/index.js";
 import Table from "../../components/Table/index.js";
+import api from '../../services/api.js'
 
 function App() {
   return (
