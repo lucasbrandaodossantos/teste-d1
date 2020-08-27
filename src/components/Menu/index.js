@@ -6,6 +6,12 @@ import {
   ItemIcon,
   ItemName,
   ItemQt,
+  TableIcon,
+  PlaneIcon,
+  PlayButtonIcon,
+  PenIcon,
+  BedIcon,
+  CheckIcon
 } from "./styles";
 class Menu extends React.Component {
   render() {
@@ -14,37 +20,37 @@ class Menu extends React.Component {
         <MenuTitle>Jornadas</MenuTitle>
 
         <MenuDivItem>
-          <ItemIcon src="/assets/icons/table.svg"></ItemIcon>
+          <TableIcon src="/assets/icons/table.svg"></TableIcon>
           <ItemName>Todas</ItemName>
           <ItemQt>12</ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
-          <ItemIcon src="/assets/icons/paper-plane.svg"></ItemIcon>
+          <PlaneIcon src="/assets/icons/paper-plane.svg"></PlaneIcon>
           <ItemName>Enviando</ItemName>
           <ItemQt>12</ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
-          <ItemIcon src="/assets/icons/play-circle.svg"></ItemIcon>
+          <PlayButtonIcon src="/assets/icons/play-circle.svg"></PlayButtonIcon>
           <ItemName>Ativadas</ItemName>
           <ItemQt>12</ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
-          <ItemIcon src="/assets/icons/pen.svg"></ItemIcon>
+          <PenIcon src="/assets/icons/pen.svg"></PenIcon>
           <ItemName>Configurando</ItemName>
           <ItemQt>12</ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
-          <ItemIcon src="/assets/icons/bed.svg"></ItemIcon>
+          <BedIcon src="/assets/icons/bed.svg"></BedIcon>
           <ItemName>Ociosa</ItemName>
           <ItemQt>12</ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
-          <ItemIcon src="/assets/icons/check.svg"></ItemIcon>
+          <CheckIcon src="/assets/icons/check.svg"></CheckIcon>
           <ItemName>Concluída</ItemName>
           <ItemQt>12</ItemQt>
         </MenuDivItem>

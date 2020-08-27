@@ -77,11 +77,17 @@ export const TableLine = styled.div`
   padding: 0px 10px 0 10px;
 `;
 
-export const ColumnName = styled.p``;
+export const ColumnName = styled.p`
+font: normal normal bold 13px/14px Gotham;
+`;
 
-export const ColumnRecipient = styled.p``;
+export const ColumnRecipient = styled.p`
+font: normal normal normal 13px/19px Gotham;
+`;
 
-export const ColumnSuccess = styled.p``;
+export const ColumnSuccess = styled.p`
+font: normal normal normal 13px/19px Gotham;
+`;
 
 export const DivStatus = styled.div`
   display: flex;
@@ -92,10 +98,10 @@ export const DivStatus = styled.div`
 `;
 
 export const ColumnStatus = styled.p`
+font: normal normal normal 13px/19px Gotham;
 `;
 
 export const IconStatus = styled.p`
   width: 14px;
   height: 14px;
-  background-color: #002002;
 `;

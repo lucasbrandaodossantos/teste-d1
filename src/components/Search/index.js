@@ -1,12 +1,13 @@
 import React from "react";
-import { Input, DivSearch } from "./styles";
+import { SearchIcon, Input, DivSearch } from "./styles";
 import NewJourneyButton from "../../components/NewJourneyButton/index.js";
 
 class Search extends React.Component {
   render() {
     return (
       <DivSearch>
-        <Input></Input>
+        <SearchIcon src=""></SearchIcon>
+        <Input placeholder="Buscar" type="search"></Input>
         <NewJourneyButton></NewJourneyButton>
       </DivSearch>
     );

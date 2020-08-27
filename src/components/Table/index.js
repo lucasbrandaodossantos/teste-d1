@@ -33,6 +33,7 @@ class Table extends React.Component {
             <ColumnSuccess>30%</ColumnSuccess>
 
             <DivStatus>
+            {/* ADICIONAR CONCIDICIONAL PARA TRATAR ICONES DE ACORDO COM O STATUS */}
               <IconStatus></IconStatus>
               <ColumnStatus>Enviando</ColumnStatus>
             </DivStatus>

@@ -23,16 +23,17 @@ export const BottomContainer = styled.div`
   align-items: center;
 `;
 
-export const Logo = styled.button`
+export const Logo = styled.img`
   margin-top: 35px;
   margin-right: 35px;
   width: 30px;
   height: 20px;
   margin-left: 18px;
+  margin-bottom:67px;
   opacity: 1;
 `;
 
-export const SidebarButton = styled.button`
+export const SidebarButton = styled.img`
   top: 595px;
   left: 26px;
   width: 20px;
@@ -40,7 +41,12 @@ export const SidebarButton = styled.button`
   text-align: left;
   font: normal normal normal 20px/25px la-solid-900;
   letter-spacing: 0px;
-  color: #e4e6f1;
   opacity: 1;
   margin-top: 20px;
+  -webkit-filter: invert(100%);
+
+  &:hover{
+    cursor:pointer;
+    filter: invert(30%) sepia(90%) saturate(2168%) hue-rotate(204deg) brightness(105%) contrast(101%);
+  }
 `;
