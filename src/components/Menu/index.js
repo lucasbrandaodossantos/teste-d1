@@ -3,7 +3,6 @@ import {
   MenuTitle,
   MenuDivPrincipal,
   MenuDivItem,
-  ItemIcon,
   ItemName,
   ItemQt,
   TableIcon,
@@ -11,18 +10,30 @@ import {
   PlayButtonIcon,
   PenIcon,
   BedIcon,
-  CheckIcon
+  CheckIcon,
 } from "./styles";
+import api from "../../services/api.js";
+
 class Menu extends React.Component {
+  state = {
+    journeys: [],
+  };
+
+  async componentDidMount() {
+    const response = await api.get("filter");
+    this.setState({ journeys: response.data });
+  }
+
   render() {
+    const { journeys } = this.state;
     return (
       <MenuDivPrincipal>
         <MenuTitle>Jornadas</MenuTitle>
-
+        
         <MenuDivItem>
           <TableIcon src="/assets/icons/table.svg"></TableIcon>
           <ItemName>Todas</ItemName>
-          <ItemQt>12</ItemQt>
+          <ItemQt></ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>

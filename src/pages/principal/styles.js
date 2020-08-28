@@ -17,6 +17,7 @@ export const DivMenuLogo = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
+  margin-left:90px;
 `;
 
 export const DivSearchTable = styled.div`

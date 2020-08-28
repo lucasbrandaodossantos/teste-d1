@@ -1,45 +1,35 @@
 import React from "react";
-import {
-  DivTable,
-  DivHeader,
-  DivLines,
-  HeaderName,
-  HeaderRecipient,
-  HeaderSuccess,
-  HeaderStatus,
-  TableLine,
-  ColumnName,
-  ColumnRecipient,
-  ColumnSuccess,
-  DivStatus,
-  ColumnStatus,
-  IconStatus,
-} from "./styles";
+import { TableComponent } from "./styles";
+import api from "../../services/api.js";
+
 class Table extends React.Component {
+  state = {
+    journeys: [],
+  };
+
+  async componentDidMount() {
+    const response = await api.get("filter");
+    this.setState({ journeys: response.data });
+  }
   render() {
+    const { journeys } = this.state;
     return (
-      <DivTable>
-        <DivHeader>
-          <HeaderName>Nome</HeaderName>
-          <HeaderRecipient>Destinatários</HeaderRecipient>
-          <HeaderSuccess>Sucesso</HeaderSuccess>
-          <HeaderStatus>Status</HeaderStatus>
-        </DivHeader>
+      <TableComponent>
+        <tr>
+          <th>Nome</th>
+          <th>Destinatário</th>
+          <th>Sucesso</th>
+          <th>Status</th>
+        </tr>
 
-        <DivLines>
-          <TableLine>
-            <ColumnName>Divulgação novos serviços</ColumnName>
-            <ColumnRecipient>20.210.000</ColumnRecipient>
-            <ColumnSuccess>30%</ColumnSuccess>
-
-            <DivStatus>
-            {/* ADICIONAR CONCIDICIONAL PARA TRATAR ICONES DE ACORDO COM O STATUS */}
-              <IconStatus></IconStatus>
-              <ColumnStatus>Enviando</ColumnStatus>
-            </DivStatus>
-          </TableLine>
-        </DivLines>
-      </DivTable>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>5</td>
+        </tr>
+        
+      </TableComponent>
     );
   }
 }

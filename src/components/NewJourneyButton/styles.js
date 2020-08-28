@@ -15,6 +15,7 @@ export const NewJourneyBt = styled.button`
   align-content:center;  
   border: none;
   color:white;
+
   
   &:hover {
     background: linear-gradient(90deg, #00e1ff, #117eff);
