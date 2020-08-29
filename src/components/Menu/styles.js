@@ -17,7 +17,7 @@ export const MenuTitle = styled.p`
 export const MenuDivPrincipal = styled.div`
   opacity: 1;
   width: fit-content;
-  height: fit-content;  
+  height: fit-content;
 `;
 
 export const MenuDivItem = styled.div`

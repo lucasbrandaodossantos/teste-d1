@@ -6,7 +6,7 @@ class Search extends React.Component {
   render() {
     return (
       <DivSearch>
-        <SearchIcon src=""></SearchIcon>
+        <SearchIcon src="/assets/icons/search.svg"></SearchIcon>
         <Input placeholder="Buscar" type="search"></Input>
         <NewJourneyButton></NewJourneyButton>
       </DivSearch>

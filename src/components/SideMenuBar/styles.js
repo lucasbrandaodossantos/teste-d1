@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Sidebar = styled.div`
   flex-direction: column;
-  top: 0px;
-  left: 0px;
+  padding:0;
+  margin:0;
   width: 71px;
   height: 768px;
   background-color: #1a1731;
   align-items: center;
-  margin-right:-90px;
+  position:relative;
 `;
 
 export const TopContainer = styled.div`
@@ -29,7 +29,7 @@ export const Logo = styled.img`
   width: 30px;
   height: 20px;
   margin-left: 18px;
-  margin-bottom:67px;
+  margin-bottom: 67px;
   opacity: 1;
 `;
 
@@ -45,8 +45,34 @@ export const SidebarButton = styled.img`
   margin-top: 20px;
   -webkit-filter: invert(100%);
 
-  &:hover{
-    cursor:pointer;
-    filter: invert(30%) sepia(90%) saturate(2168%) hue-rotate(204deg) brightness(105%) contrast(101%);
+  &:hover {
+    cursor: pointer;
+    filter: invert(30%) sepia(90%) saturate(2168%) hue-rotate(204deg)
+      brightness(105%) contrast(101%);
   }
+`;
+export const HorizontalLineTop = styled.hr`
+  margin:0;
+  padding:0;
+  border:0;
+  width: 71px;
+  height: 3px;
+  background: transparent linear-gradient(90deg, #00e1ff 0%, #117eff 100%) 0% 0%
+    no-repeat padding-box;
+  opacity: 1;
+  position:absolute;
+`;
+
+
+export const HorizontalLineBottom = styled.hr`
+  margin:0;
+  padding:0;
+  border:0;
+  width: 71px;
+  height: 3px;
+  background: transparent linear-gradient(90deg, #00e1ff 0%, #117eff 100%) 0% 0%
+    no-repeat padding-box;
+  opacity: 1;
+  bottom:0;
+  position:absolute;
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Divprincipal = styled.div`
   width: 1400px;
-  height: fit-content;
+  height: 1151px;
   background: #fafbff 0% 0% no-repeat padding-box;
   opacity: 1;
   display: flex;
@@ -21,7 +21,7 @@ export const DivMenuLogo = styled.div`
 `;
 
 export const DivSearchTable = styled.div`
-  width:fit-content;
+  width:1100px;
   height:fit-content;
   display: flex;
   flex-direction:column;

@@ -5,11 +5,14 @@ import {
   Logo,
   TopContainer,
   BottomContainer,
+  HorizontalLineBottom,
+  HorizontalLineTop
 } from "./styles.js";
 class SideMenuBar extends React.Component {
   render() {
     return (
       <Sidebar>
+        <HorizontalLineTop></HorizontalLineTop>
         <Logo src="/assets/images/logotipo-branco.png"></Logo>
         <TopContainer>
           {/* grafico de pizza */}
@@ -59,9 +62,11 @@ class SideMenuBar extends React.Component {
           <SidebarButton
             src="/assets/icons/sign-out-alt.svg"
             title="Sair"
-          ></SidebarButton>
+          ></SidebarButton>          
         </BottomContainer>
+        <HorizontalLineBottom></HorizontalLineBottom>
       </Sidebar>
+      
     );
   }
 }

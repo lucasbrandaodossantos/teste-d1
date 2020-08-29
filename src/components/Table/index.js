@@ -1,5 +1,16 @@
 import React from "react";
-import { TableComponent } from "./styles";
+import {
+  TableComponent,
+  TbBodyComponent,
+  TbHeadComponent,
+  TbThComponent,
+  TbTrComponent,
+  TbTdCompName,
+  TbTdCompRecipients,
+  TbTdCompSuccess,
+  TbTdCompStatus,
+  CustomIcon,
+} from "./styles";
 import api from "../../services/api.js";
 
 class Table extends React.Component {
@@ -8,27 +19,32 @@ class Table extends React.Component {
   };
 
   async componentDidMount() {
-    const response = await api.get("filter");
+    const response = await api.get("journey");
     this.setState({ journeys: response.data });
   }
   render() {
     const { journeys } = this.state;
     return (
       <TableComponent>
-        <tr>
-          <th>Nome</th>
-          <th>Destinatário</th>
-          <th>Sucesso</th>
-          <th>Status</th>
-        </tr>
-
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>5</td>
-        </tr>
-        
+        <TbHeadComponent>
+          <TbThComponent>Nome</TbThComponent>
+          <TbThComponent>Destinatários</TbThComponent>
+          <TbThComponent>Sucesso</TbThComponent>
+          <TbThComponent>Status</TbThComponent>
+        </TbHeadComponent>
+        {journeys.map((journey) => (
+          <TbBodyComponent>
+            <TbTrComponent>
+              <TbTdCompName>{journey.name}</TbTdCompName>
+              <TbTdCompRecipients>{journey.recipients}</TbTdCompRecipients>
+              <TbTdCompSuccess>{journey.success}</TbTdCompSuccess>
+              <TbTdCompStatus>
+                <CustomIcon /* src={icone} */></CustomIcon>
+                {journey.status}
+              </TbTdCompStatus>
+            </TbTrComponent>
+          </TbBodyComponent>
+        ))}
       </TableComponent>
     );
   }

@@ -39,31 +39,31 @@ class Menu extends React.Component {
         <MenuDivItem>
           <PlaneIcon src="/assets/icons/paper-plane.svg"></PlaneIcon>
           <ItemName>Enviando</ItemName>
-          <ItemQt>12</ItemQt>
+          <ItemQt></ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
           <PlayButtonIcon src="/assets/icons/play-circle.svg"></PlayButtonIcon>
           <ItemName>Ativadas</ItemName>
-          <ItemQt>12</ItemQt>
+          <ItemQt></ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
           <PenIcon src="/assets/icons/pen.svg"></PenIcon>
           <ItemName>Configurando</ItemName>
-          <ItemQt>12</ItemQt>
+          <ItemQt></ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
           <BedIcon src="/assets/icons/bed.svg"></BedIcon>
           <ItemName>Ociosa</ItemName>
-          <ItemQt>12</ItemQt>
+          <ItemQt></ItemQt>
         </MenuDivItem>
 
         <MenuDivItem>
           <CheckIcon src="/assets/icons/check.svg"></CheckIcon>
           <ItemName>Concluída</ItemName>
-          <ItemQt>12</ItemQt>
+          <ItemQt></ItemQt>
         </MenuDivItem>
       </MenuDivPrincipal>
     );
