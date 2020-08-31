@@ -18,5 +18,5 @@ Etapas de desenvolvimento:
  
  Etapas pendentes:
  
- 1 - Finalização da conexão com as APIs para obter os dados que populam a tabela e o filtro do menu.
+ 1 - Finalização da conexão com as APIs para obter os dados que populam o filtro do menu.
  2 - Finalização da mecânica de abrir e fechar o Modal;
