@@ -11,19 +11,11 @@ import {
   TbTdCompStatus,
   CustomIcon,
 } from "./styles";
-import api from "../../services/api.js";
-
 class Table extends React.Component {
-  state = {
-    journeys: [],
-  };
 
-  async componentDidMount() {
-    const response = await api.get("journey");
-    this.setState({ journeys: response.data });
-  }
   render() {
-    const { journeys } = this.state;
+
+    
     return (
       <TableComponent>
         <TbHeadComponent>
@@ -32,19 +24,19 @@ class Table extends React.Component {
           <TbThComponent>Sucesso</TbThComponent>
           <TbThComponent>Status</TbThComponent>
         </TbHeadComponent>
-        {journeys.map((journey) => (
+       
           <TbBodyComponent>
             <TbTrComponent>
-              <TbTdCompName>{journey.name}</TbTdCompName>
-              <TbTdCompRecipients>{journey.recipients}</TbTdCompRecipients>
-              <TbTdCompSuccess>{journey.success}</TbTdCompSuccess>
+              <TbTdCompName>..........................</TbTdCompName>
+              <TbTdCompRecipients>..........................</TbTdCompRecipients>
+              <TbTdCompSuccess>..........................</TbTdCompSuccess>
               <TbTdCompStatus>
-                <CustomIcon /* src={icone} */></CustomIcon>
-                {journey.status}
+                <CustomIcon /* src = {setIconStatus} */></CustomIcon>
+                ..........................
               </TbTdCompStatus>
             </TbTrComponent>
           </TbBodyComponent>
-        ))}
+        
       </TableComponent>
     );
   }

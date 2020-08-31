@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const DivSearch = styled.div`
   display: flex;
+  width:fit-content;
+  height:fit-content;
+  justify-self:flex-end;
   flex-direction: row;
-  margin-right: 90px;
   margin-top: 27px;
-  justify-self: flex-end;
-  align-self: flex-end;
 `;
 
 export const Icon = styled.img`

@@ -1,20 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   PopUPDiv,
   PopUPDivContent,
-  Head,
+  HeadTitle,
   Title,
   Description,
+  InputNJ,
   Continue,
   Cancel,
+  LineBottomTitle,
+  DivButtonsModal,
+  JourneyNameTitle
 } from "./styles.js";
 class NewJourney extends React.Component {
   render() {
     let popUp = (
       <PopUPDiv>
         <PopUPDivContent>
-          <Head>Nova Jornada</Head>
-          <Title></Title>
+          <HeadTitle>
+            <Title>Nova Jornada</Title>
+            <LineBottomTitle></LineBottomTitle>
+            <JourneyNameTitle>Dê um <strong>nome</strong> para essa Jornada</JourneyNameTitle>
+          </HeadTitle>
+
+          <InputNJ></InputNJ>
+          <Description>Você poderá alterar essa informação depois.</Description>
+
+          <DivButtonsModal>
+            <Continue onClick={Window.bind}>Continuar</Continue>
+            <Cancel>Cancelar</Cancel>
+          </DivButtonsModal>
         </PopUPDivContent>
       </PopUPDiv>
     );
@@ -22,7 +37,9 @@ class NewJourney extends React.Component {
     if (!this.props.isOpen) {
       popUp = null;
     }
-    return <div>{popUp}</div>;
+    return popUp;
   }
 }
 export default NewJourney;
+
+

@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import { ItemIcon } from "../Menu/styles.js";
 
+
 export const TableComponent = styled.table`
   width: 800px;
-  margin-right: 195px;
-  margin-top: 107px;
-  margin-left: 196px;
 `;
 
 export const TbHeadComponent = styled.thead``;

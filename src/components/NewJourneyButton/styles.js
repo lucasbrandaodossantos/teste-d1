@@ -7,14 +7,13 @@ export const NewJourneyBt = styled.button`
   opacity: 1;
   padding:0;
   border-radius: 5px;
-  justify-self: flex-end;
-  align-self:center;
   display:inline-flex;
   justify-content:space-between;
   align-items:center;
   align-content:center;  
   border: none;
   color:white;
+  margin-top:27px;
 
   
   &:hover {

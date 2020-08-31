@@ -2,6 +2,7 @@ import React from "react";
 import { NewJourneyBt, TextButton } from "./styles";
 import { PlusIcon } from "../Search/styles.js";
 import NewJourney from "../../pages/newJourney";
+
 class NewJourneyButton extends React.Component {
   
   state = {

@@ -20,11 +20,26 @@ export const DivMenuLogo = styled.div`
   margin-left:90px;
 `;
 
-export const DivSearchTable = styled.div`
-  width:1100px;
+export const DivSearch = styled.div`
+  width:fit-content;
   height:fit-content;
-  display: flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  display:flex;
+  flex-direction:row;
+  margin-left:558px;
+`;
+
+export const DivTable = styled.div`
+  width: 800px;
+  height:fit-content;
+  margin-left: 213px;
+  margin-top:100px;
+`;
+
+export const DivSearchTable = styled.div`
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+justify-items:flex-start;
+align-items:flex-start;
+align-content:flex-start;
 `;
