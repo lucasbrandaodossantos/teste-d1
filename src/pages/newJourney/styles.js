@@ -13,7 +13,7 @@ export const PopUPDiv = styled.div`
   z-index: 10; 
   opacity: 1;
   background-color:rgba(0, 0, 0, 0.6);
-  visibility:hidden;
+  visibility:hidden; /* MUDAR A VISIBILIDADE */
 `;
 export const PopUPDivContent = styled.div`
   display: flex;

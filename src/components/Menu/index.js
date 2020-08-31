@@ -12,11 +12,26 @@ import {
   BedIcon,
   CheckIcon,
 } from "./styles";
+import api from "../../services/api.js";
 class Menu extends React.Component {
+  state = {
+    journeys: [],
+    filters:[]
+  };
 
-  render(props) {
+  async componentDidMount() {
+    const response = await api.get("filter");
+    this.setState({ filters: response.data });
+  }
+  render() {
+
+    const {filters} = this.state;
+
     return (
+
+     
       <MenuDivPrincipal>
+         
         <MenuTitle>Jornadas</MenuTitle>
 
         <MenuDivItem>

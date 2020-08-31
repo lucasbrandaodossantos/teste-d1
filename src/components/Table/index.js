@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 import React from "react";
 import {
   TableComponent,
@@ -11,35 +12,56 @@ import {
   TbTdCompStatus,
   CustomIcon,
 } from "./styles";
+import api from "../../services/api.js";
 class Table extends React.Component {
-  async componentDidMount (){
-    const urlJourney = "https://api-d1-test.herokuapp.com/api/journey"
-    const responseJourney = await fetch (urlJourney);
-    const dataJourney = responseJourney.json();
+  state = {
+    journeys: [],
+    filters: [],
+  };
 
-    this.setState({
-      journeyArray: dataJourney
-    })
+  async componentDidMount() {
+    const response = await api.get("journey");
+    this.setState({ journeys: response.data });
   }
-  render(props) {
-    function setCustomIcon(num) {
-      num = 0;
+  render() {
+    const { journeys } = this.state;
+
+    function setCustomIcon(jstatus) {
       var icon;
-      if (num === 0) {
+      if (jstatus === 0) {
         icon = "/assets/icons/table.svg";
-      } else if (num === 1) {
+      } else if (jstatus === 1) {
         icon = "/assets/icons/paper-plane.svg";
-      } else if (num === 2) {
+      } else if (jstatus === 2) {
         icon = "/assets/icons/play-circle.svg";
-      } else if (num === 3) {
+      } else if (jstatus === 3) {
         icon = "/assets/icons/pen.svg";
-      } else if (num === 4) {
+      } else if (jstatus === 4) {
         icon = "/assets/icons/bed.svg";
-      } else if (num === 5) {
+      } else if (jstatus === 5) {
         icon = "/assets/icons/check.svg";
       }
+      console.log(icon.toString());
       return icon.toString();
-    }   
+    }
+
+    function statusName(jstatus) {
+      var statusName;
+      if (jstatus === 0) {
+        statusName = "Todos";
+      } else if (jstatus === 1) {
+        statusName = "Em Execução";
+      } else if (jstatus === 2) {
+        statusName = "Ativa";
+      } else if (jstatus === 3) {
+        statusName = "Configurando";
+      } else if (jstatus === 4) {
+        statusName = "Ociosa";
+      } else if (jstatus === 5) {
+        statusName = "Concluída";
+      }
+      return statusName.toString();
+    }
 
     return (
       <TableComponent>
@@ -50,16 +72,21 @@ class Table extends React.Component {
           <TbThComponent>Status</TbThComponent>
         </TbHeadComponent>
 
-        <TbBodyComponent>
-          <TbTrComponent>
-            <TbTdCompName></TbTdCompName>
-            <TbTdCompRecipients></TbTdCompRecipients>
-            <TbTdCompSuccess></TbTdCompSuccess>
-            <TbTdCompStatus>
-              <CustomIcon src={setCustomIcon()}></CustomIcon>
-            </TbTdCompStatus>
-          </TbTrComponent>
-        </TbBodyComponent>
+        {journeys.map((journey) => {
+          return (
+            <TbBodyComponent>
+              <TbTrComponent>
+                <TbTdCompName>{journey.name}</TbTdCompName>
+                <TbTdCompRecipients>{journey.recipients}</TbTdCompRecipients>
+                <TbTdCompSuccess>{journey.success}</TbTdCompSuccess>
+                <TbTdCompStatus>
+                  <CustomIcon src={setCustomIcon(journey.status)}></CustomIcon>
+                  {statusName(journey.status)}
+                </TbTdCompStatus>
+              </TbTrComponent>
+            </TbBodyComponent>
+          );
+        })}
       </TableComponent>
     );
   }
