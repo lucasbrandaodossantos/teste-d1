@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Divprincipal,
   DivMenuLogo,
@@ -12,15 +12,31 @@ import Search from "../../components/Search/index.js";
 import HomeLogo from "../../components/HomeLogo/index.js";
 import Table from "../../components/Table/index.js";
 import NewJourneyButton from "../../components/NewJourneyButton/index.js";
+const axios = require("axios");
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      journeyArr: {},
+      filterArr: {},
+    };    
+  }
+  async componentDidMount(){
+    const urlFilter = "https://api-d1-test.herokuapp.com/api/filter"
+
+    const responseFilter = await fetch (urlFilter);
+
+    const dataFilter = responseFilter.json();
+  }
+
   render() {
     return (
       <Divprincipal>
         <SideMenuBar></SideMenuBar>
         <DivMenuLogo>
           <HomeLogo></HomeLogo>
-          <Menu></Menu>
+          <Menu filterArray={this.state.filterArr}></Menu>
         </DivMenuLogo>
 
         <DivSearchTable>
